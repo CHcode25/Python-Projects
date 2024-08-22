@@ -37,7 +37,7 @@ def view_records():
     try:
      select = conn.execute(f"SELECT * FROM movie WHERE year = {user_input};")
 
-    #  print(f"{'Category'}{' '}{'Title'} {' '}{'Year'} {' '}{'Length'}")
+   
      print(f"{'Category'}: {'Title'}: {'Year'}: {'Length'}")
      view_movie_db = select.fetchone()
      print(f"{view_movie_db[1]}: {view_movie_db[2]}: {view_movie_db[3]}: {view_movie_db[4]}")
