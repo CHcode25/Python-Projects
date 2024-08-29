@@ -2,7 +2,7 @@ import logging
 from netmiko import ConnectHandler
 from netmiko.cisco import CiscoIosBase,CiscoIosSSH
 
-device_list = ("10.0.100.105") #This will be a list of devices once POC is done.
+device_list = [""] #This will be a list of devices once POC is done.
 
 def config():
     
