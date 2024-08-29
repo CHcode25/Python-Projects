@@ -6,7 +6,7 @@ device_list = ("10.0.100.105") #This will be a list of devices once POC is done.
 
 def config():
     
-    connectionSSH = CiscoIosSSH(ip=device_list,username='netguys', password='4aHB%9LuR7')
+    connectionSSH = CiscoIosSSH(ip=device_list,username='netguys', password='')
     # connection = ConnectHandler(**test_switch)
     config_bpdugaurd = ["interface range g0/2","spanning-tree portfast", "no switchport voice vlan 722"]
     connectionSSH .send_config_set(config_bpdugaurd)
