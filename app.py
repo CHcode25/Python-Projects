@@ -5,7 +5,7 @@ import logging
 
 app = Flask(__name__)
 
-engine = create_engine("sqlite:///C:/Users/admincj/Documents/roster.db")
+engine = create_engine("sqlite:///roster.db")
 
 @app.route("/")
 def home_page():
