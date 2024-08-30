@@ -14,13 +14,17 @@ def home_page():
 @app.route("/delete", methods=["POST","GET"])
 def deleterec():
     if request.method == "POST":
-        nm = request.form.get("nm")
-        with engine.connect() as connection:
-         connection.execute(text(f"DELETE FROM students WHERE name='{nm}';"))
-         connection.commit()
-         connection.close()
-         message = "Success"
-         return render_template("deleteresult.html", message=message)
+       message = "Permission Denied"
+       return render_template("deleteresult.html", message=message)
+    
+    # This will be add once login page is create:
+        # nm = request.form.get("nm")
+        # with engine.connect() as connection:
+        #  connection.execute(text(f"DELETE FROM students WHERE name='{nm}';"))
+        #  connection.commit()
+        #  connection.close()
+        #  message = "Success"
+        #  return render_template("deleteresult.html", message=message)
     else:
       request.method == "GET"
       return render_template("delete.html")
